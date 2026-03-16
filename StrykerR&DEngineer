@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stryker R&D – Zach Newcome</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 750px;
+      margin: 60px auto;
+      padding: 0 20px;
+      color: #111;
+      background: #fff;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 40px;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .highlight {
+      background: #f5f5f5;
+      padding: 16px;
+      border-left: 4px solid #000;
+      margin: 24px 0;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Zach Newcome</h1>
+  <div class="subtitle">Application: Stryker Neurovascular – Senior R&D Engineer</div>
+
+  <h2>Approach</h2>
+  <div class="section">
+    The most effective R&D engineers solve problems by asking the right questions and building the tools to find the solution.
+  </div>
+
+  <h2>Case Study: Intermittent E-Bike System Failure</h2>
+
+  <div class="section">
+    At Specialized, I was brought into an issue where an e-bike system would intermittently shut down after ~25 hours of riding. The only error code: “No Motor.”
+  </div>
+
+  <div class="section">
+    Electrical engineers had already run continuity tests, deployed CAN sniffers, and tested connection treatments with no resolution.
+  </div>
+
+  <div class="highlight">
+    Instead of continuing down the same path, I reframed the problem at a system level.
+  </div>
+
+  <div class="section">
+    Two patterns emerged:
+    <ul>
+      <li>Failure occurred only on carbon bikes, not alloy</li>
+      <li>It appeared faster on certain models despite identical electronics</li>
+    </ul>
+    These differences pointed to mechanical influences — stiffness and suspension travel.
+  </div>
+
+  <div class="section">
+    I applied an ISO 4210 structural test to a fully assembled bike and was able to consistently reproduce the electrical failure in the lab.
+  </div>
+
+  <div class="section">
+    Further isolation revealed voltage fluctuations synchronized with pedal cadence. Replacing CAN sniffers with an oscilloscope exposed an unreadable CAN signal.
+  </div>
+
+  <div class="highlight">
+    Root Cause: Mechanical loads altered impedance across the battery-to-bike connector, corrupting CAN communication and triggering system shutdown.
+  </div>
+
+  <div class="section">
+    To quantify the issue, I designed a voltage bridge PCB to measure impedance under both lab and real-world conditions.
+  </div>
+
+  <div class="section">
+    This created the first reliable method to reproduce and measure the failure, enabling rapid design iteration and validation of solutions.
+  </div>
+
+  <h2>Takeaway</h2>
+  <div class="section">
+    I started this project with limited experience in CAN systems. By the end, I had developed new tools, test methods, and a validated path to resolution.
+  </div>
+
+  <div class="section">
+    R&D environments require the ability to enter unfamiliar problem spaces, ask better questions, and build the tools that move teams forward. That is the approach I would bring to Stryker Neurovascular.
+  </div>
+
+  <footer>
+    Zach Newcome<br/>
+    zacharynewcome.com
+  </footer>
+
+</body>
+</html>
