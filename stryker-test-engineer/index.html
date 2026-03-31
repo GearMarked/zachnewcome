@@ -1,1 +1,39 @@
+<div class="content">
 
+  <p><strong>Dear Stryker Hiring Team,</strong></p>
+
+  <p>
+    The most effective R&D test engineers solve problems by asking the right questions and building the tools to find the solution. As a test engineer at Specialized, I applied this approach to solve an issue that had stumped the power systems team for months while also developing a validated test method to support design iteration.
+  </p>
+
+  <p>
+    An e-bike system was intermittently shutting down after 25 hours of riding with the only error code being a “No Motor” error. Electrical engineers had already performed continuity tests, deployed CAN diagnostics, and evaluated connection treatments without identifying a root cause.
+  </p>
+
+  <p>
+    Rather than continuing where they left off, I mapped the problem at a higher level. Two patterns stood out: the issue only appeared on carbon bikes, not alloy, and it manifested sooner in one model over another, despite sharing the same electrical system. These differences were mechanical—stiffness and suspension travel. I decided to run an existing ISO 4210 structural test on the assembled bike and found I could consistently recreate the electrical error.
+  </p>
+
+  <p>
+    Isolating variables further, I noticed subtle voltage fluctuations on the system power bus synchronized with pedal stroke frequency. We swapped the CAN sniffers for an oscilloscope and saw it immediately: an uninterpretable CAN signal. Forces traveling through the battery-to-bike connector were fluctuating impedance across the CAN pins. The motor firmware, seeing no interpretable CAN messages from the battery, was shutting itself off.
+  </p>
+
+  <p>
+    With the root cause identified, I built a voltage bridge PCB that allowed us to measure impedance across the connection during laboratory and real riding conditions. For the first time, we had a validated test and tool to reproduce and measure the failure. This enabled the design team to build prototypes, measure their effectiveness, and roll out a solution with confidence.
+  </p>
+
+  <p>
+    Although I began this project with limited experience in CAN system design and troubleshooting, I developed a set of validated tools to enable design iteration. R&D environments demand knowing how to enter unfamiliar problem spaces, ask the right questions, and build the right tools to keep the organization moving forward. I’m excited to bring this experience to the unique challenges of R&D medical device testing at Stryker Neurovascular!
+  </p>
+
+</div>
+
+<div class="footer">
+  <div>Warm regards,</div>
+
+  <div style="margin-top: 40px;">
+    <img src="/stryker/zbnsignature.png" style="height:50px;">
+  </div>
+
+  <div style="margin-top: 8px;">Zach Newcome</div>
+</div>
