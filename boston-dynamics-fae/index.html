@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boston Dynamics FAE – Zach Newcome</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #111;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .tagline {
+      color: #666;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .role {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .company {
+      color: #888;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .content p {
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e5e5;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1 class="name">Zach Newcome</h1>
+      <div class="tagline">Mechanical Engineer · Systems Integration · Field Engineering</div>
+
+      <div class="role">Staff Field Application Engineer Application</div>
+      <div class="company">Boston Dynamics</div>
+    </div>
+
+    <div class="content">
+
+      <p><strong>Dear Hiring Manager,</strong></p>
+
+      <p>
+        The most stubborn field failures are rarely solved by the specialist who first owns them. Often, they're solved by someone taking a step back, reframing the problem, and building the right tools from scratch. That instinct has defined my engineering career, and it's exactly what draws me to the Staff Field Application Engineer role at Boston Dynamics.
+      </p>
+
+      <p>
+        At Specialized Bicycle Components, I inherited an electromechanical failure that had stumped the dedicated power systems team for months. An e-bike system was intermittently shutting down after 25 hours of riding, logging only a vague "No Motor" error. Electrical engineers had already run continuity tests, deployed CAN sniffers, and applied dielectric greases, all to no resolution.
+      </p>
+
+      <p>
+        Rather than continuing where they left off, I mapped the problem at a higher level. Two patterns stood out: the failure only appeared on carbon-frame bikes, not alloy, and it manifested sooner on one model than another despite sharing identical electrical systems. Those differences were mechanical — frame stiffness and suspension travel. I ran an ISO 4210 structural test on the assembled bike and consistently reproduced the electrical error.
+      </p>
+
+      <p>
+        Isolating further, I noticed subtle voltage fluctuations on the system power bus synchronized with pedal stroke frequency. Swapping CAN sniffers for an oscilloscope revealed it immediately: an uninterpretable CAN signal. Mechanical forces through the battery-to-bike connector were fluctuating impedance across the CAN pins. The motor firmware, receiving no interpretable CAN messages, was shutting itself off.
+      </p>
+
+      <p>
+        With the root cause confirmed, I designed and built a custom voltage bridge PCB to measure connector impedance under both lab and real-world riding conditions. This was the first instrumented test capable of directly measuring the failure mechanism. This gave the design team a reproducible failure mode, a measurement tool, and a validation path to ship a fix with confidence. It's the same workflow a field application engineer runs when a deployed robot surfaces an integration failure a customer can't explain: characterize the system, isolate the mechanism, build the tooling, close the loop.
+      </p>
+
+      <p>
+        Beyond hardware diagnostics, I've led the end-to-end deployment of a global Lab Information Management System across seven countries — gathering requirements from engineering, quality, supply chain, and manufacturing partners, translating them into functional specifications, and driving adoption across a diverse stakeholder base. Managing integration complexity across organizational and geographic boundaries is a skill I'd bring directly to BD's partners.
+      </p>
+
+      <p>
+        I'm excited by the challenge of deploying robotic systems into real industrial environments where the edge cases are unpredictable and the stakes are high. I'd welcome the opportunity to discuss how my systems integration background and field problem-solving instincts translate to the work your team is doing at Boston Dynamics.
+      </p>
+
+    </div>
+
+    <div class="footer">
+      <div>Warm regards,</div>
+
+      <div style="margin-top: 40px;">
+        <img src="/stryker/zbnsignature.png" style="height:50px;">
+      </div>
+
+      <div style="margin-top: 8px;">Zachary Newcome</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
